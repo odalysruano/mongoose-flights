@@ -4,7 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// require dotenv and call its config() method to "process" the KEY=VALUE pairs in the .env
 require('dotenv').config();
+// connect to the database AFTER the config vars are processed
+require('./config/database');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
