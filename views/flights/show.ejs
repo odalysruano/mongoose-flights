@@ -52,4 +52,27 @@ id="add-destination-form"
     <input type="submit" value="Add Destination">
 </form>
 
+<br /><br />
+<h2>Tickets</h2>
+<% if (tickets.length) { %>
+    <table>
+        <thead>
+        <tr>
+            <th>Seat</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+            <% tickets.forEach(function(t) { %>
+            <tr>
+                <td><%= t.seat %></td>
+                <td><%= t.price %></td>
+            </tr>
+        <% }); %>
+        </tbody>
+    </table>
+<% } else { %>
+    <h5>No Tickets Yet</h5>  
+<% } %>
+
 <%- include('../partials/footer') %>
