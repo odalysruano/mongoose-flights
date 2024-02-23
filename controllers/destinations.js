@@ -8,7 +8,7 @@ async function create(req, res) {
         res.redirect(`/flights/${flight._id}`)
     } catch(err) {
         console.log(err);
-        res.status(500).send(err.message)
+        res.status(500).send(err.message);
     }
 }
 

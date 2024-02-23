@@ -36,9 +36,9 @@
 
 <br /><br />
 <form 
-action="/flights/<%= flight._id %>/destinations" 
-method="POST" 
-id="add-destination-form"
+    action="/flights/<%= flight._id %>/destinations" 
+    method="POST" 
+    id="add-destination-form"
 >
 <label>Airport:</label>
     <select name="airport">
@@ -74,5 +74,7 @@ id="add-destination-form"
 <% } else { %>
     <h5>No Tickets Yet</h5>  
 <% } %>
+
+<a href="/flights/<%= flight._id %>/tickets/new/">New Ticket</a>
 
 <%- include('../partials/footer') %>
